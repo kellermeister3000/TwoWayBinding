@@ -11,9 +11,12 @@ struct ContentView: View {
     @State private var name = ""
     
     var body: some View {
-        Form {
-            TextField("Enter your name", text: $name)
-            Text("Your name is \(name)")
+        NavigationStack {
+            Form {
+                TextField("Enter your name", text: $name)
+                Text("Your name is \(name)")
+            }
+            .navigationTitle("Hello, My name is...")
         }
     }
 }
